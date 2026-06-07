@@ -196,7 +196,7 @@ ML_Project/
 ├── Reports/
 │   └── final_comparison.txt
 │
-├── src/
+├── Src/
 │   ├── Preprocess.py
 │   ├── Logistic.py
 │   ├── Random_forest.py
@@ -212,9 +212,8 @@ ML_Project/
 Run the files in this order:
 
 ```bash
-cd src
+cd Src
 python Preprocess.py
 python Logistic.py
 python Random_forest.py
-python comparison.py
 ```
