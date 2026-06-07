@@ -4,7 +4,7 @@
 
 The project is about predicting if a diabetic patient will come back to the hospital within 30 days or not.
 
-I changed the original `readmitted` column into a new column called `readmitted_30_days`.
+We changed the original `readmitted` column into a new column called `readmitted_30_days`.
 
 The values became:
 
@@ -17,21 +17,30 @@ So the project became a binary classification problem.
 
 ## Dataset
 
-I used the Diabetes 130-US hospitals dataset.
+We used the Diabetes 130-US hospitals dataset.
 
 The dataset has information about diabetic patients, like age, gender, admission type, number of medications, diagnosis codes, and readmission result.
 
 ---
+## Datset file note
+
+The original dataset file `diabetic_data.csv` is not uploded to GitHub because it is large.
+
+Before running the project, the user must download the dataset and place it inside the `Data` folder with this exact name:
+
+```text
+Data/diabetic_data.csv
+```
 
 ## Data cleaning
 
 The cleaning was done in:
 
 ```text
-src/Preprocess.py
+Src/Preprocess.py
 ```
 
-In this file I did these steps:
+In this file We did these steps:
 
 1. Read the original dataset.
 2. Created the target column `readmitted_30_days`.
@@ -60,13 +69,13 @@ A1Cresult
 
 ## Preprocessing
 
-After cleaning, I used the cleaned data in the model scripts.
+After cleaning, We used the cleaned data in the model scripts.
 
-I split the data into:
+We split the data into:
 
 ```text
 X = features
-y = target
+Y = target
 ```
 
 Numerical columns were handled using:
@@ -81,7 +90,7 @@ Categorical columns were handled using:
 SimpleImputer(strategy="most_frequent")
 ```
 
-Then I used:
+Then We used:
 
 ```text
 OneHotEncoder(handle_unknown="ignore")
@@ -89,13 +98,13 @@ OneHotEncoder(handle_unknown="ignore")
 
 to change text columns into numbers.
 
-For Logistic Regression, I also used `StandardScaler` because this model works better when numbers are scaled.
+For Logistic Regression, We also used `StandardScaler` because this model works better when numbers are scaled.
 
 ---
 
 ## Models
 
-I trained two models.
+We trained two models.
 
 ### 1. Logistic Regression
 
@@ -104,26 +113,26 @@ This was the first model.
 File:
 
 ```text
-src/Logistic.py
+Src/Logistic.py
 ```
 
 ### 2. Random Forest
 
 This was the second model.
 
-I also used `GridSearchCV` to try more than one setting and choose the best one.
+We also used `GridSearchCV` to try more than one setting and choose the best one.
 
 File:
 
 ```text
-src/Random_forest.py
+Src/Random_forest.py
 ```
 
 ---
 
 ## Evaluation
 
-I used:
+We used:
 
 - accuracy
 - precision
