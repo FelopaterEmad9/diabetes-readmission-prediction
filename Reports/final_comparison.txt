@@ -1,0 +1,20 @@
+Final Comparison
+================
+
+Logistic Regression
+Accuracy: 0.89
+ROC AUC: 0.6364
+Recall for class 1: 0.02
+F1-score for class 1: 0.04
+
+Random Forest
+Accuracy: 0.70
+ROC AUC: 0.6498
+Recall for class 1: 0.45
+F1-score for class 1: 0.25
+
+Conclusion
+Random Forest gave the better ROC AUC score.
+Random Forest also had better recall for class 1.
+So we selected Random Forest as the final model.
+Accuracy alone is not enough because the dataset is imbalanced.
