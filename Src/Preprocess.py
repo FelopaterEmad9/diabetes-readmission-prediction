@@ -30,7 +30,7 @@ drop_cols = [
     "readmitted"
 ]
 
-df = df.drop(columns=drop_cols, errors="ignore")
+df = df.drop(columns=drop_cols)
 
 df.to_csv("../Data/cleaned_data.csv", index=False)
 
