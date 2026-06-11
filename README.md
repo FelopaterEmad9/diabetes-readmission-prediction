@@ -160,12 +160,13 @@ Class 1 F1-score: 0.04
 ### Random Forest
 
 ```text
-Accuracy: 0.70
-ROC AUC: 0.6498
-Class 1 Recall: 0.45
-Class 1 F1-score: 0.25
+Accuracy: 0.84
+ROC AUC: 0.6665
+Class 1 Recall: 0.21
+Class 1 F1-score: 0.23
 ```
-
+Best parameters
+{'classifier__max_depth': None, 'classifier__max_features': 'sqrt', 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 5, 'classifier__n_estimators': 200}
 ---
 
 ## Comparison
@@ -209,7 +210,6 @@ ML_Project/
 │   ├── Preprocess.py
 │   ├── Logistic.py
 │   ├── Random_forest.py
-│   └── comparison.py
 │
 └── README.md
 ```
